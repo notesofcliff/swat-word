@@ -1,0 +1,167 @@
+/* SWAT UI Design System */
+
+/* CSS Variables for Light/Dark Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --muted-color: #666666;
+  --border-color: #dddddd;
+  --card-bg: #f9f9f9;
+  --btn-bg: #007bff;
+  --btn-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+  --code-bg: #f4f4f4;
+  --stdout-color: #000000;
+  --stderr-color: #cc0000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --muted-color: #aaaaaa;
+  --border-color: #444444;
+  --card-bg: #2a2a2a;
+  --btn-bg: #0056b3;
+  --btn-text: #ffffff;
+  --input-bg: #333333;
+  --input-border: #555555;
+  --code-bg: #2a2a2a;
+  --stdout-color: #e0e0e0;
+  --stderr-color: #ff6666;
+}
+
+/* Helpers */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Components */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.input {
+  background: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--input-border);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--btn-bg);
+}
+
+.code {
+  background: var(--code-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--muted-color);
+}
+
+/* Terminal Specific */
+.stdout {
+  color: var(--stdout-color);
+}
+
+.stderr {
+  color: var(--stderr-color);
+}
+
+.prompt {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+#term {
+  height: 60vh;
+  overflow: auto;
+  padding: 12px;
+  white-space: pre-wrap;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+#cmd {
+  width: 100%;
+  padding: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+/* Headings */
+.h1 { font-size: 2em; font-weight: bold; margin-bottom: 0.5em; }
+.h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em; }
+.h3 { font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em; }

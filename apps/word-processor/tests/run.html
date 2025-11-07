@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Word Processor Tests</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../../lib/swat-ui.css">
+</head>
+<body>
+  <h1>Word Processor Tests</h1>
+  <div id="test-results"></div>
+  <script type="module">
+    // Simple test runner
+    const results = [];
+    function assert(condition, message) {
+      if (condition) {
+        results.push({ pass: true, message });
+      } else {
+        results.push({ pass: false, message });
+      }
+    }
+
+    function runTests() {
+      // Unit tests for md-html-serializer
+      import('./../utils/md-html-serializer.js').then(({ markdownToHtml, htmlToMarkdown }) => {
+        // Test markdown to html
+        const md = '# Hello\n\n**bold** and *italic*';
+        const html = markdownToHtml(md);
+        assert(html.includes('<h1>Hello</h1>'), 'Markdown heading conversion');
+        assert(html.includes('<strong>bold</strong>'), 'Markdown bold conversion');
+        assert(html.includes('<em>italic</em>'), 'Markdown italic conversion');
+
+        // Test html to markdown
+        const testHtml = '<h1>Hello</h1><p><strong>bold</strong> and <em>italic</em></p>';
+        const backToMd = htmlToMarkdown(testHtml);
+        assert(backToMd.includes('# Hello'), 'HTML heading to markdown');
+        assert(backToMd.includes('**bold**'), 'HTML bold to markdown');
+
+        displayResults();
+      });
+    }
+
+    function displayResults() {
+      const container = document.getElementById('test-results');
+      results.forEach(result => {
+        const div = document.createElement('div');
+        div.textContent = (result.pass ? 'PASS' : 'FAIL') + ': ' + result.message;
+        div.style.color = result.pass ? 'green' : 'red';
+        container.appendChild(div);
+      });
+    }
+
+    runTests();
+  </script>
+</body>
+</html>
