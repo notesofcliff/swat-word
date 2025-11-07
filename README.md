@@ -13,7 +13,7 @@ A primitive word processor built with the SWAT framework. This application provi
 
 ## Usage
 
-1. Open `apps/word-processor/index.html` in your browser.
+1. Open `index.html` in your browser.
 2. Start typing in the editable area.
 3. Use the toolbar to apply formatting.
 4. Save your document to the virtual filesystem.
