@@ -4,7 +4,7 @@
 
 # Word Processor
 
-A primitive word processor built with the [**SWAT (Static Web App Toolkit)**](../swat). This application serves as a demonstration of SWAT's capabilities for building zero-build, vanilla JavaScript applications.
+A primitive word processor built with the [**SWAT (Static Web App Toolkit)**](https://github.com/notesofcliff/swat). This application serves as a demonstration of SWAT's capabilities for building zero-build, vanilla JavaScript applications.
 
 ## Features
 
