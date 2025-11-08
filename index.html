@@ -10,14 +10,14 @@
 <body class="container">
   <div id="root"></div>
   <script type="module">
-    import { SWAT } from '../lib/swat.js';
+    import { SWAT } from './lib/swat.js';
     // Create a SWAT instance and expose it globally so components that use window.swat work
     const swat = new SWAT({});
     window.swat = swat;
     swat.boot({
       id: 'word-processor',
       root: '#root',
-      entry: '../apps/word-processor/main.js',
+      entry: './apps/word-processor/main.js',
       title: 'Word Processor'
     });
   </script>
