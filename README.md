@@ -1,19 +1,23 @@
+💖 **[Support Development](https://github.com/sponsors/notesofcliff)** - Sponsor on GitHub
+
+[**Live Application**](https://notesofcliff.github.io/swat-word/)
+
 # Word Processor
 
-A primitive word processor built with the SWAT framework. This application provides basic text editing capabilities with a clean, web-based interface.
+A primitive word processor built with the [**SWAT (Static Web App Toolkit)**](../swat). This application serves as a demonstration of SWAT's capabilities for building zero-build, vanilla JavaScript applications.
 
 ## Features
 
-- **Text Editing**: Rich text editor with contenteditable support for real-time editing.
+- **Text Editing**: Rich text editor with `contenteditable` support for real-time editing.
 - **Formatting Options**: Bold, italic, underline, and text alignment controls.
-- **Document Management**: Save and load documents using the virtual filesystem, with support for HTML and Markdown import/export.
+- **Document Management**: Save and load documents using SWAT's virtual filesystem, with support for HTML and Markdown import/export.
 - **Toolbar**: Intuitive toolbar with formatting buttons and menu options.
 - **Responsive Design**: Works seamlessly on desktop and mobile devices.
-- **Plugin Support**: Extensible architecture for adding custom features via SWAT plugins.
+- **Plugin Support**: Built on SWAT's extensible architecture for adding custom features.
 
 ## Usage
 
-1. Open `index.html` in your browser.
+1. Open the [**Live Application**](https://notesofcliff.github.io/swat-word/) or run `index.html` from a local server.
 2. Start typing in the editable area.
 3. Use the toolbar to apply formatting.
 4. Save your document to the virtual filesystem.
